@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sim-to-Real Transfer for Robotic Control | KAUST 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1>Simulation-to-Reality Transfer for Advanced Robotic Control</h1>
+            <p class="authors">KAUST Robotics Lab Collaboration</p>
+            <p class="date">August 23 - September 6, 2024 | King Abdullah University of Science and Technology</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#abstract">Abstract</a></li>
+                <li><a href="#methods">Methods</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#robots">Platforms</a></li>
+                <li><a href="#videos">Videos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Abstract -->
+    <section id="abstract" class="section">
+        <div class="container">
+            <h2>Abstract</h2>
+            <p class="abstract-text">
+                This project explores the challenge of transferring learned robotic control policies from simulated environments to real-world applications. 
+                Through a 15-day intensive research collaboration at KAUST, we developed and validated novel techniques for domain adaptation 
+                using reinforcement learning algorithms. Our approach demonstrates successful deployment across six different trajectory-following 
+                tasks with a 98% success rate, bridging the sim-to-real gap through systematic domain randomization and robust policy training.
+            </p>
+            
+            <div class="key-metrics">
+                <div class="metric">
+                    <span class="metric-number">15</span>
+                    <span class="metric-label">Research Days</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">6</span>
+                    <span class="metric-label">Task Scenarios</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">98%</span>
+                    <span class="metric-label">Success Rate</span>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">10k+</span>
+                    <span class="metric-label">Training Episodes</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methods -->
+    <section id="methods" class="section section-gray">
+        <div class="container">
+            <h2>Methods</h2>
+            
+            <div class="method-overview">
+                <div class="method-block">
+                    <h3>Training Environment</h3>
+                    <ul>
+                        <li>Physics Engine: IsaacSim 4.5</li>
+                        <li>Algorithm: PPO with domain randomization</li>
+                        <li>Observation Space: 24-dimensional state vector</li>
+                        <li>Action Space: Continuous control signals</li>
+                        <li>Training Episodes: 10,000+</li>
+                    </ul>
+                </div>
+                
+                <div class="method-block">
+                    <h3>Real-World Deployment</h3>
+                    <ul>
+                        <li>Computing: NVIDIA Jetson Orin</li>
+                        <li>Framework: ROS2 Humble</li>
+                        <li>Control Frequency: 100 Hz</li>
+                        <li>Sensors: MoCap Sensor</li>
+                        <li>Communication: 5G wireless</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Robot Platforms -->
+    <section id="robots" class="section">
+        <div class="container">
+            <h2>Robot Platforms</h2>
+            
+            <div class="platforms-grid">
+                <div class="platform-card">
+                    <h3>Simulation Platform</h3>
+                    <div class="platform-specs">
+                        <table>
+                            <tr>
+                                <td>Environment</td>
+                                <td>Physics-based Simulator</td>
+                            </tr>
+                            <tr>
+                                <td>Control Rate</td>
+                                <td>1000 Hz</td>
+                            </tr>
+                            <tr>
+                                <td>Sensors</td>
+                                <td>Full State Observable</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="platform-card">
+                    <h3>Physical Platform</h3>
+                    <div class="platform-specs">
+                        <table>
+                            <tr>
+                                <td>Hardware</td>
+                                <td>Custom Robotic System</td>
+                            </tr>
+                            <tr>
+                                <td>Control Rate</td>
+                                <td>100 Hz</td>
+                            </tr>
+                            <tr>
+                                <td>Sensors</td>
+                                <td>IMU, Encoders, Camera</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="section section-gray">
+        <div class="container">
+            <h2>Experimental Results</h2>
+            <p class="section-intro">Performance comparison between simulation training and real-world deployment across all tasks.</p>
+            
+            <div class="results-table">
+                <h3>Task Performance Summary</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Task</th>
+                            <th>Success Rate</th>
+                            <th>Convergence Time</th>
+                            <th>Tracking Error</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AR Action Stabilize</td>
+                            <td>98%</td>
+                            <td>2.3s</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>AR Action Stabilize 2</td>
+                            <td>96%</td>
+                            <td>2.5s</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>AR Observation Stabilize</td>
+                            <td>97%</td>
+                            <td>2.1s</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Circle Following</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>0.03m</td>
+                        </tr>
+                        <tr>
+                            <td>Spiral Following</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>0.04m</td>
+                        </tr>
+                        <tr>
+                            <td>Figure-8 Following</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>0.05m</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos" class="section">
+        <div class="container">
+            <h2>Demonstration Videos</h2>
+            <p class="section-intro">Side-by-side comparison of simulation training and real-world deployment.</p>
+            
+            <!-- Controls Row -->
+            <div class="controls-row" style="display: flex; gap: 30px; align-items: center; background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
+                <!-- Task Selector -->
+                <div class="control-group" style="flex: 1;">
+                    <label for="task-dropdown" style="font-weight: 600; color: #333; font-size: 14px; margin-right: 10px;">Task</label>
+                    <select id="task-dropdown" onchange="changeTask(this.value)" style="padding: 6px 10px; border: 1px solid #ccc; border-radius: 3px; background: white; font-size: 14px; min-width: 200px;">
+                        <option value="ar_action_stabilize">AR Action Stabilize</option>
+                        <option value="ar_action_stabilize2">AR Action Stabilize 2</option>
+                        <option value="ar_obs_stabilize">AR Observation Stabilize</option>
+                        <option value="circle_following">Circle Following</option>
+                        <option value="spiral_following">Spiral Following</option>
+                        <option value="figure8_following">Figure-8 Following</option>
+                    </select>
+                </div>
+                
+                <!-- Status Toggle -->
+                <div class="control-group" style="flex: 1;">
+                    <label style="font-weight: 600; color: #333; font-size: 14px; margin-right: 10px;">Status</label>
+                    <div class="toggle-buttons" style="display: inline-flex; border: 1px solid #ccc; border-radius: 3px; overflow: hidden;">
+                        <button id="sim-btn" onclick="showSimulation()" style="padding: 6px 20px; background: #2c5aa0; color: white; border: none; cursor: pointer; font-size: 14px;">Simulation</button>
+                        <button id="real-btn" onclick="showRealWorld()" style="padding: 6px 20px; background: white; color: #333; border: none; cursor: pointer; font-size: 14px;">Real World</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Single GIF Display -->
+            <div class="video-display" style="max-width: 800px; margin: 0 auto 20px;">
+                <div class="video-panel" style="background: #fff; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
+                    <div class="video-wrapper" style="position: relative;">
+                        <div id="video-label" class="video-label" style="position: absolute; top: 10px; left: 10px; background: rgba(0, 0, 0, 0.8); color: white; padding: 4px 12px; font-size: 12px; font-weight: 600; border-radius: 3px; z-index: 10;">Simulation</div>
+                        <img id="main-gif" src="/Users/ijisu/Desktop/Blog/position-drone.github.io/gifs/sim1.gif" alt="Task demonstration" style="width: 100%; height: auto; max-height: 500px; object-fit: contain; background: #000; display: block;">
+                        <!-- <div class="video-info" style="background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; font-size: 11px; text-align: center;">autonomous, 1x speed</div> -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Task Description -->
+            <div id="task-description" class="task-description" style="background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px; padding: 15px;">
+                <h4 style="font-size: 16px; font-weight: 600; color: #2c5aa0; margin-bottom: 8px;">AR Action Stabilize</h4>
+                <p style="font-size: 14px; color: #555; margin: 0; line-height: 1.5;">Stabilization task using action-based augmented reality control. Success Rate: 98%, Convergence Time: 2.3s</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 KAUST Robotics Lab. Research collaboration project.</p>
+            <p>Contact: robotics@kaust.edu.sa</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
