@@ -51,7 +51,7 @@
                     <span class="metric-label">Task Scenarios</span>
                 </div>
                 <div class="metric">
-                    <span class="metric-number">100%</span>
+                    <span class="metric-number">98%</span>
                     <span class="metric-label">Success Rate</span>
                 </div>
                 <div class="metric">
@@ -71,7 +71,7 @@
                 <div class="method-block">
                     <h3>Training Environment</h3>
                     <ul>
-                        <li>Physics Engine: IsaacSim 4.5</li>
+                        <li>Physics Engine: MuJoCo 2.3</li>
                         <li>Algorithm: PPO with domain randomization</li>
                         <li>Observation Space: 24-dimensional state vector</li>
                         <li>Action Space: Continuous control signals</li>
@@ -85,7 +85,7 @@
                         <li>Computing: NVIDIA Jetson Orin</li>
                         <li>Framework: ROS2 Humble</li>
                         <li>Control Frequency: 100 Hz</li>
-                        <li>Sensors: MoCap Sensor</li>
+                        <li>Sensors: IMU, Encoders, Camera</li>
                         <li>Communication: 5G wireless</li>
                     </ul>
                 </div>
@@ -229,6 +229,7 @@
                     <div class="toggle-buttons" style="display: inline-flex; border: 1px solid #ccc; border-radius: 3px; overflow: hidden;">
                         <button id="sim-btn" onclick="showSimulation()" style="padding: 6px 20px; background: #2c5aa0; color: white; border: none; cursor: pointer; font-size: 14px;">Simulation</button>
                         <button id="real-btn" onclick="showRealWorld()" style="padding: 6px 20px; background: white; color: #333; border: none; cursor: pointer; font-size: 14px;">Real World</button>
+                        <button id="traj-btn" onclick="showTrajectory()" style="padding: 6px 20px; background: white; color: #333; border: none; cursor: pointer; font-size: 14px;">Trajectory</button>
                     </div>
                 </div>
             </div>
@@ -238,8 +239,8 @@
                 <div class="video-panel" style="background: #fff; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
                     <div class="video-wrapper" style="position: relative;">
                         <div id="video-label" class="video-label" style="position: absolute; top: 10px; left: 10px; background: rgba(0, 0, 0, 0.8); color: white; padding: 4px 12px; font-size: 12px; font-weight: 600; border-radius: 3px; z-index: 10;">Simulation</div>
-                        <img id="main-gif" src="/Users/ijisu/Desktop/Blog/position-drone.github.io/gifs/sim1.gif" alt="Task demonstration" style="width: 100%; height: auto; max-height: 500px; object-fit: contain; background: #000; display: block;">
-                        <!-- <div class="video-info" style="background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; font-size: 11px; text-align: center;">autonomous, 1x speed</div> -->
+                        <img id="main-gif" src="gifs/sim1.gif" alt="Task demonstration" style="width: 100%; height: auto; max-height: 500px; object-fit: contain; background: #000; display: block;">
+                        <div class="video-info" style="background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; font-size: 11px; text-align: center;">autonomous, 1x speed</div>
                     </div>
                 </div>
             </div>
