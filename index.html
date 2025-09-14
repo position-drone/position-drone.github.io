@@ -11,8 +11,12 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
+            <div class="logos-container" style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-bottom: 20px;">
+                <img src="images/HYU_logo.png" alt="Hanyang University" style="height: 60px; object-fit: contain;">
+                <img src="images/kaust_logo.png" alt="KAUST" style="height: 60px; object-fit: contain;">
+            </div>
             <h1>Simulation-to-Reality Transfer for Advanced Robotic Control</h1>
-            <p class="authors">KAUST Robotics Lab Collaboration</p>
+            <p class="authors">Hanyang University & KAUST Robotics Lab Collaboration</p>
             <p class="date">August 23 - September 6, 2024 | King Abdullah University of Science and Technology</p>
         </div>
     </header>
@@ -71,7 +75,7 @@
                 <div class="method-block">
                     <h3>Training Environment</h3>
                     <ul>
-                        <li>Physics Engine: MuJoCo 2.3</li>
+                        <li>Physics Engine: IsaacSim 4.5</li>
                         <li>Algorithm: PPO with domain randomization</li>
                         <li>Observation Space: 24-dimensional state vector</li>
                         <li>Action Space: Continuous control signals</li>
@@ -82,11 +86,11 @@
                 <div class="method-block">
                     <h3>Real-World Deployment</h3>
                     <ul>
-                        <li>Computing: NVIDIA Jetson Orin</li>
+                        <li>Computing:On-board Computing</li>
                         <li>Framework: ROS2 Humble</li>
                         <li>Control Frequency: 100 Hz</li>
-                        <li>Sensors: IMU, Encoders, Camera</li>
-                        <li>Communication: 5G wireless</li>
+                        <li>Sensors: MoCap (Motion Capture System)</li>
+                        <li>Communication: WIFI</li>
                     </ul>
                 </div>
             </div>
@@ -105,15 +109,15 @@
                         <table>
                             <tr>
                                 <td>Environment</td>
-                                <td>Physics-based Simulator</td>
+                                <td>IsaacSim 4.5</td>
                             </tr>
                             <tr>
                                 <td>Control Rate</td>
-                                <td>1000 Hz</td>
+                                <td>100 Hz</td>
                             </tr>
                             <tr>
                                 <td>Sensors</td>
-                                <td>Full State Observable</td>
+                                <td>Absolute Position, etc.</td>
                             </tr>
                         </table>
                     </div>
@@ -125,7 +129,7 @@
                         <table>
                             <tr>
                                 <td>Hardware</td>
-                                <td>Custom Robotic System</td>
+                                <td>CrazyFile</td>
                             </tr>
                             <tr>
                                 <td>Control Rate</td>
@@ -133,7 +137,7 @@
                             </tr>
                             <tr>
                                 <td>Sensors</td>
-                                <td>IMU, Encoders, Camera</td>
+                                <td>MoCap (Motion Capture System)</td>
                             </tr>
                         </table>
                     </div>
@@ -240,7 +244,7 @@
                     <div class="video-wrapper" style="position: relative;">
                         <div id="video-label" class="video-label" style="position: absolute; top: 10px; left: 10px; background: rgba(0, 0, 0, 0.8); color: white; padding: 4px 12px; font-size: 12px; font-weight: 600; border-radius: 3px; z-index: 10;">Simulation</div>
                         <img id="main-gif" src="gifs/sim1.gif" alt="Task demonstration" style="width: 100%; height: auto; max-height: 500px; object-fit: contain; background: #000; display: block;">
-                        <div class="video-info" style="background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; font-size: 11px; text-align: center;">autonomous, 1x speed</div>
+                        <!-- <div class="video-info" style="background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; font-size: 11px; text-align: center;">autonomous, 1x speed</div> -->
                     </div>
                 </div>
             </div>
@@ -256,8 +260,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2024 KAUST Robotics Lab. Research collaboration project.</p>
-            <p>Contact: robotics@kaust.edu.sa</p>
+            <p>© 2025 Hanyang University. Research collaboration project.</p>
+            <p>Contact: brunoleej@gmail.com</p>
         </div>
     </footer>
 
