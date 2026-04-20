@@ -5,46 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sim-to-Real Transfer for Robotic Control | KAUST 2024</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
+
+    <!-- ===== HEADER / HERO ===== -->
     <header class="header">
         <div class="container">
-            <div class="logos-container" style="display: flex; justify-content: center; align-items: center; gap: 40px; margin-bottom: 20px;">
-                <img src="images/HYU_logo.png" alt="Hanyang University" style="height: 60px; object-fit: contain;">
-                <img src="images/kaust_logo.png" alt="KAUST" style="height: 60px; object-fit: contain;">
+            <!-- Institution logos -->
+            <div class="logos-container">
+                <img src="images/HYU_logo.png" alt="Hanyang University">
+                <img src="images/kaust_logo.png" alt="KAUST">
             </div>
-            <h1>Simulation-to-Reality Transfer for Advanced Robotic Control</h1>
-            <p class="authors">Hanyang University & KAUST Robotics Lab Collaboration</p>
-            <p class="date">August 23 - September 6, 2024 | King Abdullah University of Science and Technology</p>
+
+            <!-- Title -->
+            <h1>Simulation-to-Reality Transfer for<br>Advanced Robotic Control</h1>
+
+            <!-- Authors / affiliation -->
+            <p class="authors">Hanyang University &amp; KAUST Robotics Lab Collaboration</p>
+            <p class="date">August 23 &ndash; September 6, 2024 &nbsp;&middot;&nbsp; King Abdullah University of Science and Technology</p>
         </div>
     </header>
 
-    <!-- Navigation -->
+    <!-- ===== STICKY NAV (pill buttons) ===== -->
     <nav class="nav-bar">
         <div class="container">
             <ul class="nav-links">
                 <li><a href="#abstract">Abstract</a></li>
                 <li><a href="#methods">Methods</a></li>
-                <li><a href="#results">Results</a></li>
                 <li><a href="#robots">Platforms</a></li>
-                <li><a href="#videos">Videos</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#videos">Demos</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Abstract -->
-    <section id="abstract" class="section">
+    <!-- ===== ABSTRACT ===== -->
+    <section id="abstract">
         <div class="container">
             <h2>Abstract</h2>
             <p class="abstract-text">
-                This project explores the challenge of transferring learned robotic control policies from simulated environments to real-world applications. 
-                Through a 15-day intensive research collaboration at KAUST, we developed and validated novel techniques for domain adaptation 
-                using reinforcement learning algorithms. Our approach demonstrates successful deployment across six different trajectory-following 
-                tasks with a 98% success rate, bridging the sim-to-real gap through systematic domain randomization and robust policy training.
+                This project explores the challenge of transferring learned robotic control policies from simulated
+                environments to real-world applications. Through a 15-day intensive research collaboration at KAUST,
+                we developed and validated novel techniques for domain adaptation using reinforcement learning
+                algorithms. Our approach demonstrates successful deployment across six different trajectory-following
+                tasks with a 98% success rate, bridging the sim-to-real gap through systematic domain randomization
+                and robust policy training.
             </p>
-            
+
+            <!-- Key metrics -->
             <div class="key-metrics">
                 <div class="metric">
                     <span class="metric-number">15</span>
@@ -66,11 +77,11 @@
         </div>
     </section>
 
-    <!-- Methods -->
-    <section id="methods" class="section section-gray">
+    <!-- ===== METHODS ===== -->
+    <section id="methods" class="section-gray">
         <div class="container">
             <h2>Methods</h2>
-            
+
             <div class="method-overview">
                 <div class="method-block">
                     <h3>Training Environment</h3>
@@ -82,26 +93,26 @@
                         <li>Training Episodes: 10,000+</li>
                     </ul>
                 </div>
-                
+
                 <div class="method-block">
                     <h3>Real-World Deployment</h3>
                     <ul>
-                        <li>Computing:On-board Computing</li>
+                        <li>Computing: On-board Computing</li>
                         <li>Framework: ROS2 Humble</li>
                         <li>Control Frequency: 100 Hz</li>
                         <li>Sensors: MoCap (Motion Capture System)</li>
-                        <li>Communication: WIFI</li>
+                        <li>Communication: WiFi</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Robot Platforms -->
-    <section id="robots" class="section">
+    <!-- ===== ROBOT PLATFORMS ===== -->
+    <section id="robots">
         <div class="container">
             <h2>Robot Platforms</h2>
-            
+
             <div class="platforms-grid">
                 <div class="platform-card">
                     <h3>Simulation Platform</h3>
@@ -122,14 +133,14 @@
                         </table>
                     </div>
                 </div>
-                
+
                 <div class="platform-card">
                     <h3>Physical Platform</h3>
                     <div class="platform-specs">
                         <table>
                             <tr>
                                 <td>Hardware</td>
-                                <td>CrazyFile</td>
+                                <td>CrazyFlie</td>
                             </tr>
                             <tr>
                                 <td>Control Rate</td>
@@ -146,12 +157,12 @@
         </div>
     </section>
 
-    <!-- Results -->
-    <section id="results" class="section section-gray">
+    <!-- ===== RESULTS ===== -->
+    <section id="results" class="section-gray">
         <div class="container">
             <h2>Experimental Results</h2>
             <p class="section-intro">Performance comparison between simulation training and real-world deployment across all tasks.</p>
-            
+
             <div class="results-table">
                 <h3>Task Performance Summary</h3>
                 <table class="data-table">
@@ -168,37 +179,37 @@
                             <td>AR Action Stabilize</td>
                             <td>98%</td>
                             <td>2.3s</td>
-                            <td>-</td>
+                            <td>—</td>
                         </tr>
                         <tr>
                             <td>AR Action Stabilize 2</td>
                             <td>96%</td>
                             <td>2.5s</td>
-                            <td>-</td>
+                            <td>—</td>
                         </tr>
                         <tr>
                             <td>AR Observation Stabilize</td>
                             <td>97%</td>
                             <td>2.1s</td>
-                            <td>-</td>
+                            <td>—</td>
                         </tr>
                         <tr>
                             <td>Circle Following</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>0.03m</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>0.03 m</td>
                         </tr>
                         <tr>
                             <td>Spiral Following</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>0.04m</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>0.04 m</td>
                         </tr>
                         <tr>
                             <td>Figure-8 Following</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>0.05m</td>
+                            <td>—</td>
+                            <td>—</td>
+                            <td>0.05 m</td>
                         </tr>
                     </tbody>
                 </table>
@@ -206,74 +217,151 @@
         </div>
     </section>
 
-    <!-- Videos -->
-    <section id="videos" class="section">
+    <!-- ===== DEMONSTRATION VIDEOS ===== -->
+    <section id="videos">
         <div class="container">
-            <h2>Demonstration Videos</h2>
-            <p class="section-intro">Side-by-side comparison of simulation training and real-world deployment.</p>
-            
-            <!-- Controls Row -->
-            <div class="controls-row" style="display: flex; gap: 30px; align-items: center; background: #f5f5f5; padding: 15px; border-radius: 4px; margin-bottom: 20px;">
-                <!-- Task Selector -->
-                <div class="control-group" style="flex: 1;">
-                    <label for="task-dropdown" style="font-weight: 600; color: #333; font-size: 14px; margin-right: 10px;">Task</label>
-                    <select id="task-dropdown" onchange="changeTask(this.value)" style="padding: 6px 10px; border: 1px solid #ccc; border-radius: 3px; background: white; font-size: 14px; min-width: 200px;">
-                        <option value="ar_action_stabilize">AR Action Stabilize</option>
-                        <option value="ar_action_stabilize2">AR Action Stabilize 2</option>
-                        <option value="ar_obs_stabilize">AR Observation Stabilize</option>
-                        <option value="circle_following">Circle Following</option>
-                        <option value="spiral_following">Spiral Following</option>
-                        <option value="figure8_following">Figure-8 Following</option>
-                    </select>
-                </div>
-                
-                <!-- Status Toggle -->
-                <div class="control-group" style="flex: 1;">
-                    <label style="font-weight: 600; color: #333; font-size: 14px; margin-right: 10px;">Status</label>
-                    <div class="toggle-buttons" style="display: inline-flex; border: 1px solid #ccc; border-radius: 3px; overflow: hidden;">
-                        <button id="sim-btn" onclick="showSimulation()" style="padding: 6px 20px; background: #2c5aa0; color: white; border: none; cursor: pointer; font-size: 14px;">Simulation</button>
-                        <button id="real-btn" onclick="showRealWorld()" style="padding: 6px 20px; background: white; color: #333; border: none; cursor: pointer; font-size: 14px;">Real World</button>
-                        <button id="traj-btn" onclick="showTrajectory()" style="padding: 6px 20px; background: white; color: #333; border: none; cursor: pointer; font-size: 14px;">Trajectory</button>
+            <h2>Video Results</h2>
+            <p class="section-intro">Simulation training, real-world deployment, and trajectory visualizations across six tasks.</p>
+        </div>
+
+        <div class="container container--wide">
+
+            <!-- Category: Simulation -->
+            <div class="video-category">
+                <h3 id="sim-carousel-title">Simulation</h3>
+                <div class="video-carousel-panel">
+                    <div class="video-slider-container">
+                        <button class="slider-btn prev" onclick="slideGifs('sim', -1)">&#8249;</button>
+                        <div class="video-slider-wrapper">
+                            <div class="video-slider" id="sim-slider">
+                                <div class="video-wrapper">
+                                    <img src="gifs/sim1.gif" alt="Simulation Run 1">
+                                    <div class="video-caption">AR Action Stabilize<br><span class="caption-tag">Simulation</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/sim2.gif" alt="Simulation Run 2">
+                                    <div class="video-caption">AR Action Stabilize 2<br><span class="caption-tag">Simulation</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/sim3.gif" alt="Simulation Run 3">
+                                    <div class="video-caption">AR Observation Stabilize<br><span class="caption-tag">Simulation</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/sim4.gif" alt="Simulation Run 4">
+                                    <div class="video-caption">Circle Following<br><span class="caption-tag">Simulation</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/sim5.gif" alt="Simulation Run 5">
+                                    <div class="video-caption">Spiral Following<br><span class="caption-tag">Simulation</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/sim6.gif" alt="Simulation Run 6">
+                                    <div class="video-caption">Figure-8 Following<br><span class="caption-tag">Simulation</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn next" onclick="slideGifs('sim', 1)">&#8250;</button>
                     </div>
                 </div>
             </div>
-            
-            <!-- Single GIF Display -->
-            <div class="video-display" style="max-width: 800px; margin: 0 auto 20px;">
-                <div class="video-panel" style="background: #fff; border: 1px solid #ddd; border-radius: 4px; overflow: hidden;">
-                    <div class="video-wrapper" style="position: relative;">
-                        <div id="video-label" class="video-label" style="position: absolute; top: 10px; left: 10px; background: rgba(0, 0, 0, 0.8); color: white; padding: 4px 12px; font-size: 12px; font-weight: 600; border-radius: 3px; z-index: 10;">Simulation</div>
-                        <img id="main-gif" src="gifs/sim1.gif" alt="Task demonstration" style="width: 100%; height: auto; max-height: 500px; object-fit: contain; background: #000; display: block;">
-                        <!-- <div class="video-info" style="background: rgba(0, 0, 0, 0.7); color: white; padding: 5px 10px; font-size: 11px; text-align: center;">autonomous, 1x speed</div> -->
+
+            <!-- Category: Real-world -->
+            <div class="video-category">
+                <h3 id="real-carousel-title">Real-world</h3>
+                <div class="video-carousel-panel">
+                    <div class="video-slider-container">
+                        <button class="slider-btn prev" onclick="slideGifs('real', -1)">&#8249;</button>
+                        <div class="video-slider-wrapper">
+                            <div class="video-slider" id="real-slider">
+                                <div class="video-wrapper">
+                                    <img src="gifs/real1.gif" alt="Real-world Run 1">
+                                    <div class="video-caption">AR Action Stabilize<br><span class="caption-tag">Real-world</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/real2.gif" alt="Real-world Run 2">
+                                    <div class="video-caption">AR Action Stabilize 2<br><span class="caption-tag">Real-world</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/real3.gif" alt="Real-world Run 3">
+                                    <div class="video-caption">AR Observation Stabilize<br><span class="caption-tag">Real-world</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/real4.gif" alt="Real-world Run 4">
+                                    <div class="video-caption">Circle Following<br><span class="caption-tag">Real-world</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/real5.gif" alt="Real-world Run 5">
+                                    <div class="video-caption">Spiral Following<br><span class="caption-tag">Real-world</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/real6.gif" alt="Real-world Run 6">
+                                    <div class="video-caption">Figure-8 Following<br><span class="caption-tag">Real-world</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn next" onclick="slideGifs('real', 1)">&#8250;</button>
                     </div>
                 </div>
             </div>
-            
-            <!-- Task Description -->
-            <div id="task-description" class="task-description" style="background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px; padding: 15px;">
-                <h4 style="font-size: 16px; font-weight: 600; color: #2c5aa0; margin-bottom: 8px;">AR Action Stabilize</h4>
-                <p style="font-size: 14px; color: #555; margin: 0; line-height: 1.5;">Stabilization task using action-based augmented reality control. Success Rate: 98%, Convergence Time: 2.3s</p>
-            </div>
-        </div>
-    </section>
 
-    <section id="final-demo" class="section">
-    <div class="container">
-        <div class="final-video-container" style="max-width: 400px; margin: 0 auto;">
-            <div class="video-panel" style="background: #fff; border: 2px solid #2c5aa0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <div class="video-wrapper" style="position: relative;">
-                    <img src="gifs/give_disturbance.gif" alt="Complete System Demo" style="width: 100%; height: auto; display: block;">
+            <!-- Category: Trajectories -->
+            <div class="video-category">
+                <h3 id="traj-carousel-title">Trajectories</h3>
+                <div class="video-carousel-panel">
+                    <div class="video-slider-container">
+                        <button class="slider-btn prev" onclick="slideGifs('traj', -1)">&#8249;</button>
+                        <div class="video-slider-wrapper">
+                            <div class="video-slider" id="traj-slider">
+                                <div class="video-wrapper">
+                                    <img src="gifs/traj1.gif" alt="Trajectory 1">
+                                    <div class="video-caption">AR Action Stabilize<br><span class="caption-tag">Trajectory</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/traj2.gif" alt="Trajectory 2">
+                                    <div class="video-caption">AR Action Stabilize 2<br><span class="caption-tag">Trajectory</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/traj3.gif" alt="Trajectory 3">
+                                    <div class="video-caption">AR Observation Stabilize<br><span class="caption-tag">Trajectory</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/traj4.gif" alt="Trajectory 4">
+                                    <div class="video-caption">Circle Following<br><span class="caption-tag">Trajectory</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/traj5.gif" alt="Trajectory 5">
+                                    <div class="video-caption">Spiral Following<br><span class="caption-tag">Trajectory</span></div>
+                                </div>
+                                <div class="video-wrapper">
+                                    <img src="gifs/traj6.gif" alt="Trajectory 6">
+                                    <div class="video-caption">Figure-8 Following<br><span class="caption-tag">Trajectory</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="slider-btn next" onclick="slideGifs('traj', 1)">&#8250;</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <!-- Disturbance rejection feature figure -->
+            <div class="disturbance-feature">
+                <div class="disturbance-inner">
+                    <img src="gifs/give_disturbance.gif" alt="Disturbance rejection demonstration">
+                    <div class="disturbance-caption">
+                        <span class="disturbance-label">Disturbance Rejection</span>
+                        <p>The deployed policy recovers from external perturbations in real time, demonstrating robustness beyond the training distribution.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end container--wide -->
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Hanyang University. Research collaboration project.</p>
-            <p>Contact: brunoleej@gmail.com</p>
+            <p>&copy; 2025 Hanyang University. Research collaboration project.</p>
+            <p>Contact: <a href="mailto:brunoleej@gmail.com">brunoleej@gmail.com</a></p>
         </div>
     </footer>
 
